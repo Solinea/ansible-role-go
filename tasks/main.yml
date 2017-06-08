@@ -1,0 +1,18 @@
+---
+- name: Is Go installed?
+  stat:
+    path: /usr/local/go/bin/go
+  register: go_installed
+
+- block:
+   - name: Download and extract the Go tarball
+     unarchive:
+       src: "{{ go_download_location }}"
+       dest: /usr/local
+       copy: no
+
+   - name: Add Go for all users
+     copy:
+       src: go.sh
+       dest: /etc/profile.d
+  when: not go_installed.stat.exists
