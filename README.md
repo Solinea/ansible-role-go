@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/Solinea/ansible-role-go.svg?branch=master)](https://travis-ci.org/Solinea/ansible-role-go)
 
 ## Purpose:
-A simple role to install the Go language 
+A simple role to install the [Go language](https://golang.org/)
 
 ## Testing 
 This role is instrumented with the [`Molecule`](https://molecule.readthedocs.io/en/stable-1.25/) test harness. To run it, install `Molecule` with pip
